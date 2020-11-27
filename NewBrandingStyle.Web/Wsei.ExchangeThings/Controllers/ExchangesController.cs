@@ -1,12 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Wsei.ExchangeThings.Web.Filters;
 using Wsei.ExchangeThings.Web.Models;
+using Wsei.ExchangeThings.Web.Database;
+using Wsei.ExchangeThings.Web.Entities;
 
 namespace Wsei.ExchangeThings.Web.Controllers
 {
     public class ExchangesController : Controller
     {
-        [ServiceFilter(typeof(MyCustomActionFilter))]
+
+        private readonly ExchangesDbContext _dbContext;
+        public ExchangesController(ExchangesDbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
+        [ServiceFilter(typeof(ItemEntity))]
         public IActionResult Show(string id)
         {
             return View();
@@ -21,12 +30,16 @@ namespace Wsei.ExchangeThings.Web.Controllers
         [HttpPost]
         public IActionResult Add(ItemModel item)
         {
-           
-            var viewModel = new AddNewItemConfirmationViewModel
+
+            var entity = new ItemEntities
             {
                 Id = 1,
                 Name = item.Name,
+                Description = item.Description,
+                IsVisible = item.IsVisible,
             };
+            _dbContext.Items.Add(entity);
+            _dbContext.SaveChanges();
 
             //return View("AddConfirmation", viewModel);
             return RedirectToAction("AddConfirmation", new { itemId = 1 });

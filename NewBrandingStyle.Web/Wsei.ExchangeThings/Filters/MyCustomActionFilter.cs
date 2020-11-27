@@ -4,7 +4,7 @@ using System;
 
 namespace Wsei.ExchangeThings.Web.Filters
 {
-    public class MyCustomActionFilter : IActionFilter
+    public class ItemEntity : IActionFilter
     {
         public void OnActionExecuting(ActionExecutingContext context)
         {
