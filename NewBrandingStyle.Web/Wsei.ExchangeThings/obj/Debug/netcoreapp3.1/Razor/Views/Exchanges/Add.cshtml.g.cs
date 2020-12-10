@@ -27,7 +27,7 @@ using Wsei.ExchangeThings.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6e11291981990d6c95066325a015e09d73fc0ded", @"/Views/Exchanges/Add.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"df2f3748d9b73412616e365fbfaebc70d3be3e67", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"bd445d008183ce72edb8b769a9067a25cc02e6ad", @"/Views/_ViewImports.cshtml")]
     public class Views_Exchanges_Add : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Wsei.ExchangeThings.Web.Models.ItemModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-control"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
